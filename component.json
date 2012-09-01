@@ -5,7 +5,8 @@
   "keywords": ["copy", "clipboard", "dom", "click", "button"],
   "dependencies": {
     "component/classes": "*",
-    "component/emitter": "*"
+    "component/emitter": "*",
+    "component/inherit": "*"
   },
   "scripts": ["index.js"]
 }

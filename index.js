@@ -4,6 +4,7 @@
  */
 
 var classes = require('classes');
+var inherit = require('inherit');
 var Emitter = require('emitter');
 
 /**
@@ -138,7 +139,7 @@ function Client(node, parent){
  * Inherits from `Emitter.prototype`.
  */
 
-Client.prototype.__proto__ = Emitter.prototype;
+inherit(Client, Emitter);
 
 
 Client.prototype.glue = function(elem, appendElem, stylesToAdd) {

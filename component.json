@@ -1,0 +1,11 @@
+{
+  "name": "clipboard-dom",
+  "description": "Makes a DOM element (i.e. <button>) write to the system clipboard",
+  "version": "0.0.1",
+  "keywords": ["copy", "clipboard", "dom", "click", "button"],
+  "dependencies": {
+    "component/classes": "*",
+    "component/emitter": "*"
+  },
+  "scripts": ["index.js"]
+}

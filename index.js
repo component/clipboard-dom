@@ -8,10 +8,29 @@ var inherit = require('inherit');
 var Emitter = require('emitter');
 
 /**
+ * Module exports.
+ */
+
+exports = module.exports = Client;
+exports.swf = swf;
+
+/**
  * URL to the "ZeroClipboard.swf" file.
  */
 
 var swfPath = 'ZeroClipboard.swf';
+
+/**
+ * Get/set the SWF path.
+ */
+
+function swf(path){
+  if (0 === arguments.length) {
+    return swfPath;
+  } else {
+    return swfPath = path;
+  }
+}
 
 /**
  * Sets "display: none" on the DOM node.

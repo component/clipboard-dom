@@ -141,10 +141,16 @@ function Client(node, parent){
 
 inherit(Client, Emitter);
 
+/**
+ * Render the SWF movie on top of the "elem" DOM element.
+ *
+ * @param elem DOMNode The DOM node that will be "converted"
+ * @param appendElem DOMNode (optional) The DOM node that the SWF will be inserted into
+ * @api public
+ */
 
-Client.prototype.glue = function(elem, appendElem, stylesToAdd) {
-  // glue to DOM element
-  // elem can be ID or actual DOM element object
+Client.prototype.glue =
+Client.prototype.render = function(elem, appendElem) {
   this.domElement = elem;
 
   // float just above object, or default zIndex if dom element isn't set
@@ -178,26 +184,25 @@ Client.prototype.glue = function(elem, appendElem, stylesToAdd) {
     }
   }
 
-  // style.backgroundColor = '#f00'; // debug
-
   appendElem.appendChild(this.div);
-
-  this.div.innerHTML = this.getHTML( box.width, box.height );
+  this.div.innerHTML = this.getHTML(box.width, box.height);
 };
 
+/**
+ * Generate the HTML for SWF embed.
+ *
+ * @api private
+ */
+
 Client.prototype.getHTML = function(width, height){
-  // return HTML for movie
   var html = '';
-  var flashvars = 'id=' + this.id +
-    '&width=' + width +
-    '&height=' + height;
+  var flashvars = 'id=' + this.id + '&width=' + width + '&height=' + height;
 
   if (navigator.userAgent.match(/MSIE/)) {
     // IE gets an OBJECT tag
     var protocol = /^https/i.test(location.href) ? 'https://' : 'http://';
     html += '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="'+protocol+'download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="'+width+'" height="'+height+'" id="'+this.movieId+'" align="middle"><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="false" /><param name="movie" value="'+swfPath+'" /><param name="loop" value="false" /><param name="menu" value="false" /><param name="quality" value="best" /><param name="bgcolor" value="#ffffff" /><param name="flashvars" value="'+flashvars+'"/><param name="wmode" value="transparent"/></object>';
-  }
-  else {
+  } else {
     // all other browsers get an EMBED tag
     html += '<embed id="'+this.movieId+'" src="'+swfPath+'" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="'+width+'" height="'+height+'" name="'+this.movieId+'" align="middle" allowScriptAccess="always" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="'+flashvars+'" wmode="transparent" />';
   }

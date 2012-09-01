@@ -6,7 +6,7 @@
 ## Installation
 
 ```
-$ component install component/clipboard
+$ component install component/clipboard-dom
 ```
 
 ## Example

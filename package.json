@@ -6,7 +6,8 @@
   "dependencies": {
     "classes-component": "*",
     "inherit-component": "*",
-    "emitter-component": "*"
+    "emitter-component": "*",
+    "send": "*"
   },
   "component": {
     "scripts": {

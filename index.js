@@ -53,36 +53,6 @@ function show(node){
 }
 
 /**
- * Adds class name "name" to the DOM node.
- *
- * @api private
- */
-
-function addClass(node, name){
-  classes(node).add(name);
-}
-
-/**
- * Removes class name "name" from the DOM node.
- *
- * @api private
- */
-
-function removeClass(node, name){
-  classes(node).remove(name);
-}
-
-/**
- * Returns `true` if the DOM node has class "name", `false` otherwise.
- *
- * @api private
- */
-
-function hasClass(node, name){
-  classes(node).has(name);
-}
-
-/**
  * Get absolute coordinates for dom element.
  * XXX: this probably belongs in a more focused component ("position"?)
  *
@@ -329,6 +299,11 @@ Client.prototype.setHandCursor = function(enabled){
 Client.prototype.receiveEvent = function(eventName, args){
   eventName = eventName.toString().toLowerCase().replace(/^on/, '');
 
+  var domClasses;
+  if (this.domElement) {
+    domClasses = classes(this.domElement);
+  }
+
   // special behavior for certain events
   switch (eventName) {
     case 'load':
@@ -355,34 +330,34 @@ Client.prototype.receiveEvent = function(eventName, args){
       break;
 
     case 'mouseover':
-      if (this.domElement) {
-        addClass(this.domElement, 'hover');
+      if (domClasses) {
+        domClasses.add('hover');
         if (this.recoverActive) {
-          addClass(this.domElement, 'active');
+          domClasses.add('active');
         }
       }
       break;
 
     case 'mouseout':
-      if (this.domElement) {
+      if (domClasses) {
         this.recoverActive = false;
-        if (hasClass(this.domElement, 'active')) {
-          removeClass(this.domElement, 'active');
+        if (domClasses.has('active')) {
+          domClasses.remove('active');
           this.recoverActive = true;
         }
-        removeClass(this.domElement, 'hover');
+        domClasses.remove('hover');
       }
       break;
 
     case 'mousedown':
-      if (this.domElement) {
-        addClass(this.domElement, 'active');
+      if (domClasses) {
+        domClasses.add('active');
       }
       break;
 
     case 'mouseup':
-      if (this.domElement) {
-        removeClass(this.domElement, 'active');
+      if (domClasses) {
+        domClasses.remove('active');
         this.recoverActive = false;
       }
       break;

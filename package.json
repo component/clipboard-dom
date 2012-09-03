@@ -1,0 +1,16 @@
+{
+  "name": "clipboard-dom-component",
+  "description": "Copy-to-Clipboard on a DOM element",
+  "keywords": ["copy", "clipboard", "text", "click", "dom", "button"],
+  "version": "0.0.0",
+  "dependencies": {
+    "classes-component": "*",
+    "inherit-component": "*",
+    "emitter-component": "*"
+  },
+  "component": {
+    "scripts": {
+      "clipboard-dom": "index.js"
+    }
+  }
+}

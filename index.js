@@ -91,7 +91,10 @@ function dispatch(id, eventName, args){
  * Ensure that the ZeroClipboard-required global variables are set.
  */
 
-window.ZeroClipboard = { dispatch: dispatch, nextId: 1, clients: {} };
+if (!window.ZeroClipboard) window.ZeroClipboard = {};
+if (!window.ZeroClipboard.nextId) window.ZeroClipboard.nextId = 1;
+if (!window.ZeroClipboard.clients) window.ZeroClipboard.clients = {};
+if (!window.ZeroClipboard.dispatch) window.ZeroClipboard.dispatch = dispatch;
 
 /**
  * The Client constructor. Turns a DOM node into a "Copy to Clipboard" button.

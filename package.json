@@ -10,7 +10,7 @@
   },
   "component": {
     "scripts": {
-      "clipboard-dom": "index.js"
+      "clipboard-dom": "clipboard-dom.js"
     }
   }
 }

@@ -8,5 +8,5 @@
     "component/emitter": "*",
     "component/inherit": "*"
   },
-  "scripts": ["index.js"]
+  "scripts": ["clipboard-dom.js"]
 }

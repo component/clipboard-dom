@@ -8,5 +8,6 @@
     "component/emitter": "*",
     "component/inherit": "*"
   },
+  "files": ["ZeroClipboard.swf"],
   "scripts": ["clipboard-dom.js"]
 }

@@ -10,6 +10,7 @@
     "send": "*"
   },
   "component": {
+    "files": ["ZeroClipboard.swf"],
     "scripts": {
       "clipboard-dom": "clipboard-dom.js"
     }

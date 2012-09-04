@@ -11,7 +11,23 @@ $ component install component/clipboard-dom
 
 ## Example
 
+``` html
+<html>
+  <body>
+    <!-- The "copy-button" *should* be inside a div with "position: relative"
+         or something else that "has layout". -->
+    <div style="position: relative;">
+      <button id="copy-button">Copy to Clipboard</button>
+    </div>
+    <script src="build/build.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+```
+
 ``` js
+// main.js
+
 var Clip = require('clipboard-dom');
 
 // set the path to the swf file first

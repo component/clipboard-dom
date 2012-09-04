@@ -170,12 +170,6 @@ Client.prototype.render = function(elem, appendElem) {
   style.height = '' + box.height + 'px';
   style.zIndex = this.zIndex;
 
-  if (typeof(stylesToAdd) == 'object') {
-    for (var addedStyle in stylesToAdd) {
-      style[addedStyle] = stylesToAdd[addedStyle];
-    }
-  }
-
   appendElem.appendChild(this.div);
   this.div.innerHTML = this.getHTML(box.width, box.height);
 };

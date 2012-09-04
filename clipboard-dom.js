@@ -33,26 +33,6 @@ function swf(path){
 }
 
 /**
- * Sets "display: none" on the DOM node.
- *
- * @api private
- */
-
-function hide(node){
-  node.style.display = 'none';
-}
-
-/**
- * Sets "display: " on the DOM node.
- *
- * @api private
- */
-
-function show(node){
-  node.style.display = '';
-}
-
-/**
  * Get absolute coordinates for dom element.
  * XXX: this probably belongs in a more focused component ("position"?)
  *

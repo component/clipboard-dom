@@ -1,5 +1,5 @@
 {
-  "name": "clipboard-dom-component",
+  "name": "clipboard-dom",
   "description": "Copy-to-Clipboard on a DOM element",
   "keywords": ["copy", "clipboard", "text", "click", "dom", "button"],
   "version": "0.0.2",

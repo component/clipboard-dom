@@ -2,7 +2,7 @@
   "name": "clipboard-dom-component",
   "description": "Copy-to-Clipboard on a DOM element",
   "keywords": ["copy", "clipboard", "text", "click", "dom", "button"],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "classes-component": "*",
     "inherit-component": "*",

@@ -1,7 +1,9 @@
 
 # clipboard-dom
 
-  Makes a DOM element (i.e. &lt;button&gt;) write to the system clipboard
+  Makes a DOM element (i.e. &lt;button&gt;) write to the system clipboard. This
+  component is based off of the [ZeroClipboard](https://github.com/jonrohan/ZeroClipboard)
+  project, and in fact uses the same SWF Flash code.
 
 ## Installation
 

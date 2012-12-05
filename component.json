@@ -9,5 +9,5 @@
     "component/inherit": "*"
   },
   "files": ["ZeroClipboard.swf"],
-  "scripts": ["clipboard-dom.js"]
+  "scripts": ["index.js"]
 }

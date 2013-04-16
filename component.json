@@ -2,12 +2,22 @@
   "name": "clipboard-dom",
   "description": "Makes a DOM element (i.e. <button>) write to the system clipboard",
   "version": "0.0.3",
-  "keywords": ["copy", "clipboard", "dom", "click", "button"],
+  "keywords": [
+    "copy",
+    "clipboard",
+    "dom",
+    "click",
+    "button"
+  ],
   "dependencies": {
     "component/classes": "*",
     "component/emitter": "*",
     "component/inherit": "*"
   },
-  "files": ["ZeroClipboard.swf"],
-  "scripts": ["index.js"]
+  "files": [
+    "ZeroClipboard.swf"
+  ],
+  "scripts": [
+    "index.js"
+  ]
 }

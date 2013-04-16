@@ -1,1 +1,47 @@
-My Page
+<html>
+  <head>
+    <title>clipboard-dom test</title>
+    <script src="build/build.js"></script>
+    <style type="text/css">
+      button.hover {
+        color: red;
+      }
+      button.active {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative;">
+      <button id="button">Copy to Clipboard</button>
+    </div>
+    <script type="text/javascript">
+      var Clip = require('clipboard-dom/clipboard-dom');
+      Clip.swf('ZeroClipboard.swf');
+
+      var button = document.getElementById('button');
+      var clip = new Clip(button, button.parentNode);
+      clip.text('hello world!');
+
+      clip.on('load', function () {
+        console.log('loaded');
+      });
+      clip.on('complete', function (text) {
+        console.log('copied!', text);
+      });
+      clip.on('mouseover', function () {
+        console.log('mouseover');
+      });
+      clip.on('mouseout', function () {
+        console.log('mouseout');
+      });
+      clip.on('mousedown', function () {
+        console.log('mousedown');
+      });
+      clip.on('mouseup', function () {
+        console.log('mouseup');
+      });
+
+    </script>
+  </body>
+</html>

@@ -28,7 +28,8 @@ function swf(path){
   if (0 === arguments.length) {
     return swfPath;
   } else {
-    return swfPath = path;
+    swfPath = path;
+    return Client;
   }
 }
 

@@ -1,2 +1,3 @@
-components
-build
+/components
+/build
+/.DS_Store

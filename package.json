@@ -6,8 +6,7 @@
   "dependencies": {
     "classes-component": "*",
     "inherit-component": "*",
-    "emitter-component": "*",
-    "send": "*"
+    "emitter-component": "*"
   },
   "component": {
     "files": ["ZeroClipboard.swf"],

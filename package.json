@@ -1,7 +1,14 @@
 {
   "name": "clipboard-dom",
   "description": "Copy-to-Clipboard on a DOM element",
-  "keywords": ["copy", "clipboard", "text", "click", "dom", "button"],
+  "keywords": [
+    "copy",
+    "clipboard",
+    "text",
+    "click",
+    "dom",
+    "button"
+  ],
   "version": "0.0.4",
   "dependencies": {
     "classes-component": "*",
@@ -9,9 +16,15 @@
     "emitter-component": "*"
   },
   "component": {
-    "files": ["ZeroClipboard.swf"],
+    "files": [
+      "ZeroClipboard.swf"
+    ],
     "scripts": {
       "clipboard-dom": "index.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/clipboard-dom.git"
   }
 }

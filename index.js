@@ -138,6 +138,8 @@ Client.prototype.render = function(elem, appendElem) {
     appendElem = document.getElementsByTagName('body')[0];
   }
 
+  this.appendElement = appendElem;
+
   // find X/Y position of domElement
   var box = getDOMObjectPosition(this.domElement, appendElem);
 
@@ -225,7 +227,7 @@ Client.prototype.reposition = function(elem){
   }
 
   if (this.domElement && this.div) {
-    var box = getDOMObjectPosition(this.domElement);
+    var box = getDOMObjectPosition(this.domElement, this.appendElement);
     var style = this.div.style;
     style.left = '' + box.left + 'px';
     style.top = '' + box.top + 'px';

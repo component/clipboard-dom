@@ -18,7 +18,7 @@ exports.swf = swf;
  * URL to the "ZeroClipboard.swf" file.
  */
 
-var swfPath = 'ZeroClipboard.swf';
+var swfPath = /* component:file */ 'ZeroClipboard.swf';
 
 /**
  * Get/set the SWF path.

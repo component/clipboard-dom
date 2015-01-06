@@ -45,7 +45,7 @@ clip.on('load', function(){
   console.log('button loaded');
 });
 
-clip.on('completed', function(text){
+clip.on('complete', function(text){
   console.log('copied text to the clipboard:', text);
 });
 

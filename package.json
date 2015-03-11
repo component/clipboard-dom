@@ -15,6 +15,11 @@
     "inherit-component": "*",
     "emitter-component": "*"
   },
+  "browser": {
+    "classes": "classes-component",
+    "inherit": "inherit-component",
+    "emitter": "emitter-component"
+  },
   "component": {
     "files": [
       "ZeroClipboard.swf"

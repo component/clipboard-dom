@@ -1,4 +1,10 @@
 
+0.0.6 / 2015-03-11
+==================
+
+  * package: add "browser" mappings for browserify
+  * fix typo in example
+
 0.0.5 / 2014-06-16
 ==================
 
